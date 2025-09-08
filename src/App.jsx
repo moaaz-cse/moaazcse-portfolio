@@ -1,12 +1,11 @@
-import "./App.css";
-import "tailwindcss";
+import Nav from "./sections/Nav/Nav";
+import { useState } from "react";
 
-function App() {
+export default function App() {
   return (
-    <h1 className="font-poppins text-2xl font-bold underline">
-      Hello with Poppins ✨
-    </h1>
-  );
+    <div>
+      <Nav />
+      <h1>Hello World</h1>
+    </div>
+  )
 }
-
-export default App;
