@@ -1,11 +1,10 @@
 import Nav from "./sections/Nav/Nav";
-import { useState } from "react";
-
+import Project from "./sections/Projects/Project";
 export default function App() {
   return (
-    <div>
+    <div className="bg-background text-text-default min-h-screen">
       <Nav />
-      <h1>Hello World</h1>
+      <Project />
     </div>
-  )
+  );
 }

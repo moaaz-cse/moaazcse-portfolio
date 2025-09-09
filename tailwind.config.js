@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-// tailwind.config.js
 export default {
   theme: {
     extend: {
@@ -8,5 +7,5 @@ export default {
       },
     },
   },
+  plugins: [require("@tailwindcss/line-clamp")],
 };
-
