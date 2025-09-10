@@ -36,10 +36,10 @@ const Project = () => {
 
   return (
     <div className="max-w-sm mx-auto p-4">
-      <h2 className="flex flex-col items-center text-white text-xl font-bold mb-4">
-        <span className="text-gray-500 block">RECENT</span>
-        <span className="text-gray-500 opacity-65">PROJECTS</span>
-      </h2>
+      <h1 className="flex flex-col items-center font-bold mb-4">
+        <span className="text-fgm-white text-2xl">RECENT</span>
+        <span className="text-fgm-gray text-3xl">PROJECTS</span>
+      </h1>
       <div className="space-y-4">
         {projects.map((project, index) => {
           const isExpanded = expandedIndex === index;

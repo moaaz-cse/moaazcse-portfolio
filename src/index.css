@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-light: #6ee7b7;
+  /* --color-primary-light: #6ee7b7;
   --color-primary-dark: #047857;
   --color-primary-DEFAULT: #10b981;
 
@@ -19,7 +19,18 @@
   --color-neutral-DEFAULT: #374151;
 
   --color-background: #111827;
-  --color-background-light: #1f2937;
+  --color-background-light: #1f2937; */
+
+  /*Here are the colors from figma, all figma color are prefixed with fgm-yourcolorname(like bg-fgm-black)*/
+  --color-fgm-black: #151312;
+  --color-fgm-white: #ffffff;
+  --color-fgm-gray: #998f8f;
+  --color-fgm-green: #c5ff41;
+  --color-fgm-orange: #f46c38;
+  --color-fgm-darkGray: #6a6b6e;
+  --color-fgm-softGray: #b6b4bd;
+  --color-fgm-youtube: #ff2600;
+  --color--fgm-url: #9769ff;
 }
 
 body {
