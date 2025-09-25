@@ -35,10 +35,10 @@ const Project = () => {
   };
 
   return (
-    <div className="max-w-sm mx-auto p-4">
+    <div id="projects" className="max-w-sm mx-auto p-6 my-2">
       <h1 className="flex flex-col items-center font-bold mb-4">
-        <span className="text-fgm-white text-2xl">RECENT</span>
-        <span className="text-fgm-gray text-3xl">PROJECTS</span>
+        <span className="text-fgm-white text-3xl">RECENT</span>
+        <span className="text-fgm-gray text-4xl">PROJECTS</span>
       </h1>
       <div className="space-y-4">
         {projects.map((project, index) => {

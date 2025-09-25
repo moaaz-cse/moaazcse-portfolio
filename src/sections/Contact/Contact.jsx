@@ -20,7 +20,10 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-black text-white text-center px-4 py-10 sm:px-6 lg:px-12 max-w-3xl mx-auto rounded-2xl shadow-lg">
+    <div
+      id="contact"
+      className="bg-fgm-black text-white text-center px-4 py-10 sm:px-6 lg:px-12 max-w-3xl mx-auto rounded-2xl shadow-lg"
+    >
       {/* Heading */}
       <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
         <span className="block">LET&apos;S WORK</span>

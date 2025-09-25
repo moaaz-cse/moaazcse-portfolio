@@ -20,20 +20,20 @@ const Hero = () => {
     },
   ];
   return (
-    <div className="bg-fgm-white flex items-center justify-center min-h-screen p-4">
-      <div className="rounded-xl shadow-lg overflow-hidden p-4 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl w-full">
+    <div id="hero" className="bg-fgm-black p-6 mt-15">
+      <div className="bg-fgm-white rounded-xl shadow-lg overflow-hidden p-2">
         <div>
-          <div className="relative bg-fgm-orange rounded-2xl">
+          <div className="flex justify-center rounded-2xl py-2">
             <img
               src={heroData[0].imageURL}
               alt="Profile"
-              className="w-full h-48 object-contain"
+              className="w-[80%] rounded-2xl"
             />
           </div>
           <div className="p-6 text-center">
-            <h2 className="text-2xl font-bold mb-2">{heroData[0].name}</h2>
+            <h2 className="text-3xl pb-3 font-bold">{heroData[0].name}</h2>
             <p className="text-gray-600 mb-4">{heroData[0].description}</p>
-            <div className="flex justify-center space-x-4 text-orange-500">
+            <div className="flex justify-center gap-6">
               <a
                 href={heroData[0].leetCode}
                 aria-label="leetCode profile"
