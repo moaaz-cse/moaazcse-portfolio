@@ -34,8 +34,8 @@ const Experience = () => {
       <div className="space-y-6">
         {experienceData.items.map((exp, idx) => (
           <div key={idx}>
-            <h2 className="font-bold text-lg">{exp.title}</h2>
-            <ul className="list-disc list-inside text-sm text-fgm-gray">
+            <h2 className="font-bold text-lg md:text-2xl">{exp.title}</h2>
+            <ul className="list-disc list-inside text-sm md:text-lg text-fgm-gray">
               {exp.responsibilities.map((res, i) => (
                 <li key={i} className="py-2">
                   {res}

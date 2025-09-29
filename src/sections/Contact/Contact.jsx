@@ -1,6 +1,16 @@
-// ContactForm.jsx
 import React, { useState } from "react";
-
+import {
+  Listbox,
+  ListboxOption,
+  ListboxOptions,
+  ListboxButton,
+} from "@headlessui/react";
+const options = [
+  { value: "", label: "Select..." },
+  { value: "project", label: "New Project" },
+  { value: "collaboration", label: "Collaboration" },
+  { value: "other", label: "Other" },
+];
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -24,15 +34,11 @@ const ContactForm = () => {
       id="contact"
       className="bg-fgm-black text-white text-center px-4 py-10 sm:px-6 lg:px-12 max-w-3xl mx-auto rounded-2xl shadow-lg"
     >
-      {/* Heading */}
       <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
         <span className="block">LET&apos;S WORK</span>
         <span className="block text-gray-600 font-normal">TOGETHER</span>
       </h1>
-
-      {/* Form */}
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        {/* Name + Email */}
         <div className="flex flex-col md:flex-row gap-4">
           <input
             type="text"
@@ -53,22 +59,25 @@ const ContactForm = () => {
             className="flex-1 p-3 rounded-lg bg-slate-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
         </div>
+        <Listbox>
+          <div className="relative">
+            <ListboxButton className="w-full p-3 rounded-lg bg-slate-800 text-white text-left focus:outline-none focus:ring-2 focus:ring-orange-500">
+              {({ value }) => value?.label ?? "Select..."}
+            </ListboxButton>
 
-        {/* Subject */}
-        <select
-          name="subject"
-          value={formData.subject}
-          onChange={handleChange}
-          required
-          className="p-3 rounded-lg bg-slate-800 text-white focus:outline-none focus:ring-2 focus:ring-orange-500"
-        >
-          <option value="">Select...</option>
-          <option value="project">New Project</option>
-          <option value="collaboration">Collaboration</option>
-          <option value="other">Other</option>
-        </select>
-
-        {/* Message */}
+            <ListboxOptions className="absolute mt-1 w-full rounded-lg bg-slate-900 shadow-lg z-10">
+              {options.map((option, idx) => (
+                <ListboxOption
+                  key={idx}
+                  value={option}
+                  className="cursor-pointer select-none p-2 text-white text-left hover:bg-slate-700"
+                >
+                  {option.label}
+                </ListboxOption>
+              ))}
+            </ListboxOptions>
+          </div>
+        </Listbox>
         <textarea
           name="message"
           placeholder="Message"
@@ -78,8 +87,6 @@ const ContactForm = () => {
           required
           className="p-3 rounded-lg bg-slate-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
         />
-
-        {/* Submit Button */}
         <button
           type="submit"
           className="p-3 rounded-lg bg-orange-500 hover:bg-orange-600 font-semibold transition"
@@ -87,8 +94,6 @@ const ContactForm = () => {
           Submit
         </button>
       </form>
-
-      {/* Footer */}
       <p className="mt-6 text-xs sm:text-sm text-gray-400">
         Made by{" "}
         <a href="#" className="text-orange-500 hover:underline">

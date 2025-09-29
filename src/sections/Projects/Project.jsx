@@ -35,8 +35,8 @@ const Project = () => {
   };
 
   return (
-    <div id="projects" className="max-w-sm mx-auto p-6 my-2">
-      <h1 className="flex flex-col items-center font-bold mb-4">
+    <div id="projects" className="max-w-6xl mx-auto p-6 my-6">
+      <h1 className="flex flex-col items-center font-bold mb-8">
         <span className="text-fgm-white text-3xl">RECENT</span>
         <span className="text-fgm-gray text-4xl">PROJECTS</span>
       </h1>
@@ -52,7 +52,7 @@ const Project = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-20 h-12 object-cover rounded-md mr-4"
+                className="w-20 h-12 object-cover rounded-md mr-4 md:w-[20%] md:h-18 lg:w-[17%]"
               />
               <div className="flex-1">
                 <a

@@ -35,9 +35,7 @@ const SkillsSection = () => {
         <h2 className="text-3xl font-bold">Work Expertise</h2>
         <p className="text-gray-400 mt-2">Some of the areas I am skilled at</p>
       </div>
-
-      {/* Grid Layout */}
-      <div className="grid grid-cols-2 gap-8 px-6">
+      <div className="grid grid-cols-2  gap-8 px-6 lg:grid-cols-3">
         {skills.map((skill, index) => (
           <motion.div
             key={index}

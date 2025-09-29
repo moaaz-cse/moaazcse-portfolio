@@ -20,14 +20,14 @@ const Hero = () => {
     },
   ];
   return (
-    <div id="hero" className="bg-fgm-black p-6 mt-15">
+    <div id="hero" className="bg-fgm-black p-6 mt-15 md:mt-10">
       <div className="bg-fgm-white rounded-xl shadow-lg overflow-hidden p-2">
         <div>
           <div className="flex justify-center rounded-2xl py-2">
             <img
               src={heroData[0].imageURL}
               alt="Profile"
-              className="w-[80%] rounded-2xl"
+              className="w-[80%] md:w-[60%] lg:w-[40%] rounded-2xl "
             />
           </div>
           <div className="p-6 text-center">
