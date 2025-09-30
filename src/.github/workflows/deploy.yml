@@ -1,0 +1,45 @@
+name: Build & Deploy (recommended for small droplets)
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install deps & build
+        run: |
+          npm ci
+          npm run build        # outputs into dist/ or build/ (adjust path below)
+
+      - name: Start SSH agent and add key
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.DO_SSH_KEY }}
+
+      - name: Add host to known_hosts (optional but recommended)
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.DO_HOST }} >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Sync built files to server
+        env:
+          HOST: ${{ secrets.DO_HOST }}
+          USER: ${{ secrets.DO_USER }}
+        run: |
+          # adjust ./dist/ to ./build/ if your build output folder name differs
+          rsync -avz --delete ./dist/ $USER@$HOST:/var/www/html/
+
+          # optionally restart nginx if required
+          ssh $USER@$HOST 'sudo systemctl restart nginx || true'
