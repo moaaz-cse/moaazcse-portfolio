@@ -15,6 +15,7 @@ export default function App() {
       <Experience />
       <Services />
       <Experience />
+      <ContactForm />
       <Project />
       <SkillsSection />
       <ContactForm />
