@@ -21,7 +21,7 @@ jobs:
       - name: Deploy to Droplet
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.DO_USER }}@${{ secrets.DO_HOST }} << 'EOF'
-            cd /var/www/portfolio
+            cd /var/www/moaazcse-portfolio
             git pull origin main
             npm install
             npm run build
