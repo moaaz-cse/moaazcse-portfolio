@@ -13,9 +13,6 @@ export default function App() {
       <Hero />
       <Services />
       <Experience />
-      <Services />
-      <Experience />
-      <ContactForm />
       <Project />
       <SkillsSection />
       <ContactForm />
