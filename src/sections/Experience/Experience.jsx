@@ -26,7 +26,7 @@ const Experience = () => {
   };
 
   return (
-    <div id="experience" className="text-white px-2 mx-6">
+    <div id="experience" className="text-white px-2 mx-6 pt-3">
       <div className="text-center text-4xl font-bold p-4">
         <h2>{experienceData.exp}</h2>
         <h2 className="text-fgm-gray">EXPERIENCE</h2>

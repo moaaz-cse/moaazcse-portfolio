@@ -8,15 +8,20 @@ import SkillsSection from "./sections/Skills/SkillsSection";
 
 export default function App() {
   return (
-    <div className="bg-fgm-black min-h-screen">
+    <div className="bg-fgm-black">
       <Nav />
-      <Hero />
-      <Services />
-      <Experience />
-      <Project />
-      <SkillsSection />
-      <ContactForm />
-      <h1>Hello World</h1>
+      <div className="w-full lg:flex lg:pt-[8%] h-screen">
+        <div className="lg:w-[40%] lg:sticky lg:top-[10%] h-fit">
+          <Hero />
+        </div>
+        <div className="lg:w-[60%] h-screen overflow-y-scroll no-scrollbar">
+          <Services />
+          <Experience />
+          <Project />
+          <SkillsSection />
+          <ContactForm />
+        </div>
+      </div>
     </div>
   );
 }

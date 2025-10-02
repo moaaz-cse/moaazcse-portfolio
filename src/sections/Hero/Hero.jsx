@@ -27,7 +27,7 @@ const Hero = () => {
             <img
               src={heroData[0].imageURL}
               alt="Profile"
-              className="w-[80%] md:w-[60%] lg:w-[40%] rounded-2xl "
+              className="w-[80%] md:w-[60%] lg:w-[70%] rounded-2xl "
             />
           </div>
           <div className="p-6 text-center">

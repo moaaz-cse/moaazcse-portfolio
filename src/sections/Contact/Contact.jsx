@@ -47,7 +47,7 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="flex-1 p-3 rounded-lg bg-slate-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="flex-1 p-3 rounded-lg bg-slate-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 lg:w-1/2"
           />
           <input
             type="email"
@@ -56,7 +56,7 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="flex-1 p-3 rounded-lg bg-slate-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="flex-1 p-3 rounded-lg bg-slate-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 lg:w-1/2"
           />
         </div>
         <Listbox>
@@ -95,13 +95,13 @@ const ContactForm = () => {
         </button>
       </form>
       <p className="mt-6 text-xs sm:text-sm text-gray-400">
-        Made by{" "}
-        <a href="#" className="text-orange-500 hover:underline">
-          Templyo
-        </a>{" "}
-        | Powered by{" "}
-        <a href="#" className="text-orange-500 hover:underline">
-          Framer
+        Made by
+        <a href="#" className="text-orange-500 hover:underline mx-1">
+          Moaaz
+        </a>
+        | Powered by
+        <a href="#" className="text-orange-500 hover:underline mx-1">
+          Growing Mindset
         </a>
       </p>
     </div>
