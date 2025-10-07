@@ -11,15 +11,18 @@ export default function App() {
     <div className="bg-fgm-black">
       <Nav />
       <div className="w-full lg:flex lg:pt-[8%] h-screen">
-        <div className="lg:w-[40%] lg:sticky lg:top-[10%] h-fit">
+        <div className=" flex justify-center lg:w-[40%] lg:sticky lg:top-[10%] h-fit">
           <Hero />
         </div>
         <div className="lg:w-[60%] h-screen overflow-y-scroll no-scrollbar">
-          <Services />
-          <Experience />
-          <Project />
-          <SkillsSection />
-          <ContactForm />
+          <div>
+            <Services />
+          </div>
+
+          {/* <Experience /> */}
+          {/* <Project /> */}
+          {/* <SkillsSection /> */}
+          {/* <ContactForm /> */}
         </div>
       </div>
     </div>

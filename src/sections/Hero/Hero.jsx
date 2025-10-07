@@ -6,8 +6,7 @@ import linkedInSvg from "../../assets/icons/linkedIn.svg";
 import emailSvg from "../../assets/icons/email.svg";
 
 const Hero = () => {
-  const heroData = [
-    {
+  const heroData =  {
       imageURL: img,
       name: "Moaaz Ahmed",
       description: ` Cloud Engineer in Training (AWS re/START) | Software Developer -
@@ -17,69 +16,56 @@ const Hero = () => {
       leetCode: "https://leetcode.com/u/moaaz-ahmed/",
       gitHub: "https://github.com/moaaz-cse",
       linkedIn: "https://www.linkedin.com/in/moaaz-ahmed-70607621b/",
-    },
-  ];
+    };
+
+
+
   return (
-    <div id="hero" className="bg-fgm-black p-6 mt-15 md:mt-10">
-      <div className="bg-fgm-white rounded-xl shadow-lg overflow-hidden p-2">
-        <div>
-          <div className="flex justify-center rounded-2xl py-2">
-            <img
-              src={heroData[0].imageURL}
-              alt="Profile"
-              className="w-[80%] md:w-[60%] lg:w-[70%] rounded-2xl "
-            />
-          </div>
-          <div className="p-6 text-center">
-            <h2 className="text-3xl pb-3 font-bold">{heroData[0].name}</h2>
-            <p className="text-gray-600 mb-4">{heroData[0].description}</p>
-            <div className="flex justify-center gap-6">
-              <a
-                href={heroData[0].leetCode}
-                aria-label="leetCode profile"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={leetCodeSvg}
-                  alt="LeetCode"
-                  className="w-6 h-6 hover:opacity-75 transition-opacity"
-                />
-              </a>
-              <a
-                href={heroData[0].gitHub}
-                aria-label="gitHub profile"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={gitHubSvg}
-                  alt="LeetCode"
-                  className="w-6 h-6 hover:opacity-75 transition-opacity"
-                />
-              </a>
-              <a
-                href={heroData[0].linkedIn}
-                aria-label="LinkedIn profile"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={linkedInSvg}
-                  alt="LeetCode"
-                  className="w-6 h-6 hover:opacity-75 transition-opacity"
-                />
-              </a>
-              <a href={`mailto:${heroData[0].email}`} aria-label="Email">
-                <img
-                  src={emailSvg}
-                  alt="LeetCode"
-                  className="w-6 h-6 hover:opacity-75 transition-opacity"
-                />
-              </a>
-            </div>
-          </div>
+    <div
+      id="hero"
+      className="bg-white rounded-2xl shadow-lg flex flex-col items-center justify-between p-6"
+      style={{ width: "344px", height: "640px", }}
+    >
+      {/* Profile image box */}
+      <div className="bg-gradient-to-b from-orange-500 to-red-600 rounded-xl overflow-hidden mt-2">
+        <img
+          src={heroData.imageURL}
+          alt="Profile"
+          className="w-[240px] h-[280px]"
+        />
+      </div>
+
+      {/* Name */}
+      <h2 className="text-[28px] font-bold text-black mt-4">
+        {heroData.name}
+      </h2>
+
+      {/* Decoration (flame + dotted curve) */}
+      <div className="flex flex-col items-center space-y-2">
+        <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center">
+          <span className="text-white text-xl">🔥</span>
         </div>
+      </div>
+
+      {/* Description */}
+      <p className="text-gray-600 text-center text-[14px] px-2 mt-2">
+        {heroData.description}
+      </p>
+
+      {/* Social icons */}
+      <div className="flex justify-center gap-6 mt-4">
+        <a href={heroData.leetCode} target="_blank" rel="noopener noreferrer">
+          <img src={leetCodeSvg} alt="LeetCode" className="w-6 h-6" />
+        </a>
+        <a href={heroData.gitHub} target="_blank" rel="noopener noreferrer">
+          <img src={gitHubSvg} alt="GitHub" className="w-6 h-6" />
+        </a>
+        <a href={heroData.linkedIn} target="_blank" rel="noopener noreferrer">
+          <img src={linkedInSvg} alt="LinkedIn" className="w-6 h-6" />
+        </a>
+        <a href={`mailto:${heroData.email}`}>
+          <img src={emailSvg} alt="Email" className="w-6 h-6" />
+        </a>
       </div>
     </div>
   );
