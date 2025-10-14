@@ -18,11 +18,10 @@ export default function App() {
           <div>
             <Services />
             <SkillsSection />
+            <Experience />
+            <Project />
           </div>
 
-          <Experience />
-          <Project />
-          <SkillsSection />
           {/* <ContactForm /> */}
         </div>
       </div>

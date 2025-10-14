@@ -1,24 +1,10 @@
 import React from "react";
+import data from "../../../data.json";
 import { ArrowUpRight } from "lucide-react";
 
 const Experience = () => {
-  const experienceData = {
-    exp: "2 YEARS OF",
-    items: [
-      {
-        title: "Software Developer | Publicis Sapient",
-        date: "Oct 2021 - Dec 2022",
-        description:
-          "Managed troubleshooting and resolving post-deployment issues (L3 support) across multiple markets, reducing bug turnaround time by 30%. Developed and maintained full-stack features for Nestlé brand portals, handling frontend interfaces and backend integrations.",
-      },
-      {
-        title: "MERN Developer | Embifi Pvt. Ltd.",
-        date: "Feb 2021 - Sep 2021",
-        description:
-          "Developed and deployed the company’s website using the MERN stack, optimized for mobile, tablet, and desktop devices. Collaborated with backend teams to optimize API performance and integrated server-side data into frontend views, enhancing user engagement.",
-      },
-    ],
-  };
+  // Access the Experience array from JSON
+  const experienceData = data.Experience?.[0]; // Get the first (and only) object
 
   return (
     <section
@@ -28,7 +14,7 @@ const Experience = () => {
       {/* Header Section */}
       <div className="text-start mb-8">
         <h1 className="text-[100px] font-bold text-white -mt-8 transform scale-x-96 origin-left uppercase">
-          {experienceData.exp} {/* e.g. '2' */}
+          {experienceData.exp}
         </h1>
         <h1 className="text-[100px] font-bold text-[#B6B4BD] -mt-12 uppercase">
           EXPERIENCE
@@ -53,10 +39,12 @@ const Experience = () => {
               {exp.title}
             </h3>
 
-            {/* Description */}
-            <p className="text-[#9d9d9d] text-base md:text-lg leading-relaxed mb-4">
-              {exp.description}
-            </p>
+            {/* Responsibilities List */}
+            <ul className="list-disc pl-5 text-[#9d9d9d] text-base md:text-lg leading-relaxed mb-4 space-y-2">
+              {exp.responsibilities.map((resp, rIdx) => (
+                <li key={rIdx}>{resp}</li>
+              ))}
+            </ul>
 
             {/* Date */}
             <p className="text-[#767676] text-sm md:text-base">{exp.date}</p>
