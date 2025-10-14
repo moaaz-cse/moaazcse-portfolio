@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ArrowUpRight } from "lucide-react";
 
 const Project = () => {
   const projects = [
@@ -6,23 +7,23 @@ const Project = () => {
       title: "DevTinder (Personal Project)",
       description:
         "Architected and implemented a React.js web application for developer matchmaking based on skills and interests. Designed a RESTful API with Node.js and Express.js, integrated MongoDB for storing user profiles. Implemented authentication and authorization using JWT, built a messaging feature for real-time user interaction.",
-      image: "https://www.nestlegoodnes.com/fr/sites/default/files/styles/medium/public/logos/logo-garden-gourmet.png?itok=cOhd16Zb",
+      image:
+        "https://www.nestlegoodnes.com/fr/sites/default/files/styles/medium/public/logos/logo-garden-gourmet.png?itok=cOhd16Zb",
       projectURL: "https://github.com/moaaz-cse/devTinder",
     },
     {
-      title: "Nestle GardenGourmet-FRLaunch-2022:",
+      title: "Nestle GardenGourmet-FR Launch 2022",
       description:
-        "Independently implemented themes in the French market. Ensured responsive layout and optimized asset loading, achieving a 20% improvement in page load times. Using Twig, SCSS, JavaScript, and jQuery.",
+        "Independently implemented themes for the French market. Ensured responsive layout and optimized asset loading, achieving a 20% improvement in page load times using Twig, SCSS, JavaScript, and jQuery.",
       image:
         "https://www.nestlegoodnes.com/fr/sites/default/files/styles/medium/public/logos/logo-garden-gourmet.png?itok=cOhd16Zb",
       projectURL: "https://www.gardengourmet.fr/",
     },
     {
-      title: "Maggi Arabia accessibility enhancement",
+      title: "Maggi Arabia Accessibility Enhancement",
       description:
-        "Enhanced website accessibility to meet AAA standards, including semantic markup, ARIA roles, and keyboard navigation. Coordinated with UX designers and QA engineers to validate improvements and document testing procedures.",
-      image:
-        "https://www.maggiarabia.com/sites/default/files/maggi_logo1_0.png",
+        "Enhanced website accessibility to meet AAA standards, including semantic markup, ARIA roles, and keyboard navigation. Collaborated with UX designers and QA engineers to validate improvements and document testing procedures.",
+      image: "https://www.maggiarabia.com/sites/default/files/maggi_logo1_0.png",
       projectURL: "https://www.maggiarabia.com/en/",
     },
   ];
@@ -34,55 +35,60 @@ const Project = () => {
   };
 
   return (
-    <div
-      id="projects"
-      className="max-w-6xl mx-auto p-6 my-6"
-      style={{ border: "2px solid red" }}
-    >
-      <h1
-        className="flex flex-col items-start font-bold mb-8"
-        style={{ border: "2px solid red" }}
-      >
-        <span className="text-fgm-white text-5xl lg:text-6xl">RECENT</span>
-        <span className="text-fgm-gray text-5xl lg:text-6xl">PROJECTS</span>
-      </h1>
-      <div className="space-y-4">
+    <section id="projects" className="bg-fgm-black text-white px-6 py-16">
+      {/* Heading */}
+      <div className="flex flex-col justify-start mb-10">
+        <h1 className="text-[100px] font-bold text-white -mt-8 transform scale-x-95 origin-left uppercase">
+          Recent
+        </h1>
+        <h1 className="text-[100px] font-bold text-[#B6B4BD] -mt-12 uppercase">
+          Projects
+        </h1>
+      </div>
+
+      {/* Project Cards */}
+      <div className="md:w-9/12 lg:w-11/12 flex flex-col gap-6">
         {projects.map((project, index) => {
           const isExpanded = expandedIndex === index;
           return (
             <div
               key={index}
-              className="flex items-start bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition cursor-pointer"
               onClick={() => toggleExpand(index)}
+              className="relative group bg-[#1a1a1a] hover:bg-[#222] transition-all duration-300 rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row items-start gap-6 cursor-pointer"
             >
+              <ArrowUpRight
+                className="absolute top-6 right-6 text-[#8e8e8e] group-hover:text-white transition"
+                size={20}
+              />
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-20 h-12 object-cover rounded-md mr-4 md:w-[20%] md:h-18 lg:w-[17%]"
+                className="w-24 h-16 sm:w-28 sm:h-20 md:w-32 md:h-24 rounded-lg object-contain bg-white/5 p-2"
               />
               <div className="flex-1">
                 <a
                   href={project.projectURL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white font-semibold hover:underline"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  {project.title}
+                  <h3 className="text-2xl md:text-3xl font-semibold text-white hover:text-[#B6B4BD] transition-colors duration-300">
+                    {project.title}
+                  </h3>
                 </a>
-                <div
-                  className={`text-gray-400 text-sm mt-1 overflow-hidden transition-all duration-500 ease-out ${
+                <p
+                  className={`text-[#9d9d9d] text-sm md:text-base mt-3 leading-relaxed overflow-hidden transition-all duration-500 ease-out ${
                     isExpanded ? "max-h-96" : "max-h-12"
                   }`}
                 >
                   {project.description}
-                </div>
+                </p>
               </div>
             </div>
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 
