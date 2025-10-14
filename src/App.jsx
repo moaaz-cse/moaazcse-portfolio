@@ -17,6 +17,7 @@ export default function App() {
         <div className="lg:w-[60%] h-screen overflow-y-scroll no-scrollbar">
           <div>
             <Services />
+            <SkillsSection />
           </div>
 
           {/* <Experience /> */}
