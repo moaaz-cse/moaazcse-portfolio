@@ -1,16 +1,16 @@
 {
   "ServiceSection": [
     {
-      "description": "Software Engineer with 2+ years of experience, currently training in AWS re/START with hands-on expertise in EC2, S3, IAM, networking, and Linux. Skilled in React.js, Node.js, RESTful APIs, and microservices with strong problem-solving skills. Seeking an entry-level role as a Cloud Support Associate/Cloud/Software Engineer.",
-      "yearOfExperience": "2+ Years",
-      "projectCompleted": "5+ Projects"
+      "description": "Software Engineer with 5+ years of experience, currently training in AWS re/START with hands-on expertise in EC2, S3, IAM, networking, and Linux. Skilled in React.js, Node.js, RESTful APIs, and microservices with strong problem-solving skills. Seeking an entry-level role as a Cloud Support Associate/Cloud/Software Engineer.",
+      "yearOfExperience": "6+ Years",
+      "projectCompleted": "6+ Projects"
     }
   ],
   "Blog": [],
-  "Contact": [],
+  "Contact": [{ "name": "Moaaz Ahmed" }],
   "Experience": [
     {
-      "exp": "2 YEARS OF",
+      "exp": "5 YEARS OF",
       "items": [
         {
           "title": "Software Developer | Publicis Sapient",
@@ -66,21 +66,21 @@
       "projectURL": "https://www.maggiarabia.com/en/"
     }
   ],
-  "Skills": [{
-    "name": "JavaScript",
-    "icon": <SiJavascript className="text-yellow-400 text-5xl" />,
-  },
-  { "name": "Python", icon: <SiPython className="text-blue-400 text-5xl" /> },
-  { "name": "React.js", icon: <FaReact className="text-cyan-400 text-5xl" /> },
-  { "name": "Node.js", icon: <FaNodeJs className="text-green-500 text-5xl" /> },
-  {
-    "name": "Express.js",
-    "icon": <SiExpress className="text-gray-300 text-5xl" />,
-  },
-  { "name": "MongoDB", "icon": <SiMongodb className="text-green-600 text-5xl" /> },
-  { "name": "SQL", "icon": <SiMysql className="text-blue-600 text-5xl" /> },
-  { "name": "AWS", "icon": <FaAws className="text-orange-400 text-5xl" /> },
-  { "name": "Git", "icon": <FaGitAlt className="text-red-500 text-5xl" /> },
-  { name: "Postman", icon: <SiPostman className="text-orange-500 text-5xl" /> },],
+  "Skills": [
+    {
+      "name": "JavaScript",
+      "icon": "SiJavascript",
+      "color": "text-yellow-400"
+    },
+    { "name": "Python", "icon": "SiPython", "color": "text-blue-400" },
+    { "name": "React.js", "icon": "FaReact", "color": "text-cyan-400" },
+    { "name": "Node.js", "icon": "FaNodeJs", "color": "text-green-500" },
+    { "name": "Express.js", "icon": "SiExpress", "color": "text-gray-300" },
+    { "name": "MongoDB", "icon": "SiMongodb", "color": "text-green-600" },
+    { "name": "SQL", "icon": "SiMysql", "color": "text-blue-600" },
+    { "name": "AWS", "icon": "FaAws", "color": "text-orange-400" },
+    { "name": "Git", "icon": "FaGitAlt", "color": "text-red-500" },
+    { "name": "Postman", "icon": "SiPostman", "color": "text-orange-500" }
+  ],
   "Tools": []
 }
