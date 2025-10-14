@@ -35,10 +35,17 @@ const Project = () => {
   };
 
   return (
-    <div id="projects" className="max-w-6xl mx-auto p-6 my-6">
-      <h1 className="flex flex-col items-center font-bold mb-8">
-        <span className="text-fgm-white text-3xl">RECENT</span>
-        <span className="text-fgm-gray text-4xl">PROJECTS</span>
+    <div
+      id="projects"
+      className="max-w-6xl mx-auto p-6 my-6"
+      style={{ border: "2px solid red" }}
+    >
+      <h1
+        className="flex flex-col items-start font-bold mb-8"
+        style={{ border: "2px solid red" }}
+      >
+        <span className="text-fgm-white text-5xl lg:text-6xl">RECENT</span>
+        <span className="text-fgm-gray text-5xl lg:text-6xl">PROJECTS</span>
       </h1>
       <div className="space-y-4">
         {projects.map((project, index) => {

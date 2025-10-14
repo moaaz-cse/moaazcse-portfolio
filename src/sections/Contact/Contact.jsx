@@ -32,13 +32,18 @@ const ContactForm = () => {
   return (
     <div
       id="contact"
-      className="bg-fgm-black text-white text-center px-4 py-10 sm:px-6 lg:px-12 max-w-3xl mx-auto rounded-2xl shadow-lg"
+      className="bg-fgm-black text-white px-4 py-10 sm:px-6 lg:px-12 max-w-3xl  rounded-2xl shadow-lg"
+      style={{ border: "2px solid red" }}
     >
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+      <h1 className="text-3xl  text-center sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
         <span className="block">LET&apos;S WORK</span>
         <span className="block text-gray-600 font-normal">TOGETHER</span>
       </h1>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-4"
+        style={{ border: "2px solid red" }}
+      >
         <div className="flex flex-col md:flex-row gap-4">
           <input
             type="text"

@@ -26,12 +26,16 @@ const Experience = () => {
   };
 
   return (
-    <div id="experience" className="text-white px-2 mx-6 pt-3">
+    <div
+      id="experience"
+      className="text-white px-2  pt-3 mt-2"
+      style={{ border: "2px solid red" }}
+    >
       <div className="text-center text-4xl font-bold p-4">
         <h2>{experienceData.exp}</h2>
         <h2 className="text-fgm-gray">EXPERIENCE</h2>
       </div>
-      <div className="space-y-6">
+      <div className="space-y-6 px-3" style={{ border: "2px solid yellow" }}>
         {experienceData.items.map((exp, idx) => (
           <div key={idx}>
             <h2 className="font-bold text-lg md:text-2xl">{exp.title}</h2>
