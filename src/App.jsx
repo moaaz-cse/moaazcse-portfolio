@@ -12,7 +12,7 @@ export default function App() {
       <Nav />
       <div className="w-full lg:flex lg:pt-[8%] h-screen">
         <div className=" flex justify-center lg:w-[40%] lg:sticky lg:top-[10%] h-fit">
-          {/* <Hero /> */}
+          <Hero />
         </div>
         <div className="lg:w-[60%] h-screen overflow-y-scroll no-scrollbar">
           <div>
@@ -20,9 +20,9 @@ export default function App() {
             <SkillsSection />
           </div>
 
-          {/* <Experience /> */}
-          {/* <Project /> */}
-          {/* <SkillsSection /> */}
+          <Experience />
+          <Project />
+          <SkillsSection />
           {/* <ContactForm /> */}
         </div>
       </div>
