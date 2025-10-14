@@ -1,27 +1,15 @@
-import React, { useEffect, useState } from "react";
-import data from "../../../data.json";
+import React from "react";
 
 const Services = () => {
-const [detail, setDetails] = useState([]);
-
-useEffect(() => {
-  // Simulate fetching data from a local JSON file
-  const userdata = data;
-  setDetails(userdata);
-}, []);
-
-console.log(detail);
-
-
   return (
     <div className="">
       <div className="bg-fgm-black px-6 text-start my-3">
         <div className="flex flex-col justify-start">
-          <h1 className="lg:text-[100px] sm:text-[70px] max-sm:text-[50px] font-bold text-white  transform scale-x-105 origin-left uppercase" style={{border : "2px solid red"}}>
+          <h1 className="text-[100px] font-bold text-white -mt-8 transform scale-x-96 origin-left uppercase">
             Software
           </h1>
-          <h1 className="text-[100px] font-bold text-[#B6B4BD] -mt-12 transform scale-x-120 origin-left uppercase">
-            {detail[0]?.owner}
+          <h1 className="text-[100px] font-bold text-[#B6B4BD] -mt-12 uppercase">
+            Engineer
           </h1>
         </div>
 
@@ -37,6 +25,7 @@ console.log(detail);
         </p>
       </div>
 
+
       <div
         className="lg:w-11/12 h-[155.5px] px-6"
         style={{ border: "2px solid blue" }}
@@ -46,34 +35,22 @@ console.log(detail);
             style={{ border: "2px solid yellow" }}
             className="w-[200px] flex flex-col justify-between"
           >
-            <h1 className="text-[68px] font-bold text-fgm-white transform scale-x-190 origin-left tracking-[-3px]">
-              +12
-            </h1>
-            <h2 className="text-[#998F8F]">
-              YEARS OF <br />
-              EXPERIENCE
-            </h2>
-          </div>
+            <h1 className="text-[68px] font-bold text-fgm-white transform scale-x-190 origin-left tracking-[-3px]">+12</h1>
+            <h2 className="text-[#998F8F]">YEARS OF <br/>EXPERIENCE</h2>
+          </div> 
           <div
             style={{ border: "2px solid green" }}
             className="w-[200px] mx-10"
           >
-            <h1 className="text-[68px] font-bold text-fgm-white transform scale-x-190 origin-left tracking-[-3px]">
-              +40
-            </h1>
-            <h2 className="text-[#998F8F]">
-              PROJECTS <br />
-              COMPLETED
-            </h2>
+            <h1 className="text-[68px] font-bold text-fgm-white transform scale-x-190 origin-left tracking-[-3px]">+40</h1>
+            <h2 className="text-[#998F8F]">PROJECTS <br/>COMPLETED</h2>
           </div>
-          <div style={{ border: "2px solid purple" }} className="w-[200px]">
-            <h1 className="text-[68px] line-clamp-[120] font-bold text-fgm-white transform scale-x-190 origin-left tracking-[-3px]">
-              +4
-            </h1>
-            <h2 className="text-[#998F8F]">
-              WORLDWIDE <br />
-              CLIENTS
-            </h2>
+          <div
+            style={{ border: "2px solid purple" }}
+            className="w-[200px]"
+          >
+            <h1 className="text-[68px] line-clamp-[120] font-bold text-fgm-white transform scale-x-190 origin-left tracking-[-3px]">+4</h1>
+            <h2 className="text-[#998F8F]">WORLDWIDE <br/>CLIENTS</h2>
           </div>
         </div>
       </div>
