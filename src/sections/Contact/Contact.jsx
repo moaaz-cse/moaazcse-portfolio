@@ -5,6 +5,8 @@ import {
   ListboxOptions,
   ListboxButton,
 } from "@headlessui/react";
+import data from "../../../data.json";
+
 const options = [
   { value: "", label: "Select..." },
   { value: "project", label: "New Project" },
@@ -18,6 +20,7 @@ const ContactForm = () => {
     subject: "",
     message: "",
   });
+  const contactData = data.Contact?.[0];
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -106,7 +109,7 @@ const ContactForm = () => {
       <p className="mt-6 text-xs sm:text-sm text-gray-400">
         Made by
         <a href="#" className="text-orange-500 hover:underline mx-1">
-          Moaaz
+          {contactData.name}
         </a>
         | Powered by
         <a href="#" className="text-orange-500 hover:underline mx-1">
