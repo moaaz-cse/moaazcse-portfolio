@@ -36,3 +36,17 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+.testing {
+  /* height: 100%; */
+  overflow-y: hidden; /* prevent vertical body scrolling */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
