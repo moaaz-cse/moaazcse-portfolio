@@ -14,14 +14,18 @@ export default function App() {
         <div className=" flex justify-center lg:w-[40%] lg:sticky lg:top-[10%] h-fit">
           <Hero />
         </div>
-        <div className="lg:w-[60%] h-screen overflow-y-scroll  scroll-auto lg:scroll-smooth">
-          <div className="">
-            <Services /> 
-            <Experience />
-            <Project />
-            <SkillsSection />
-            <ContactForm />
-          </div>
+        <div
+          className="lg:w-[60%] h-screen overflow-y-scroll "
+          style={{
+            scrollbarWidth: "none", // Firefox
+            msOverflowStyle: "none", // IE and Edge
+          }}
+        >
+          <Services />
+          <Experience />
+          <Project />
+          <SkillsSection />
+          <ContactForm />
         </div>
       </div>
     </div>
