@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 import {
   Listbox,
   ListboxOption,
@@ -20,16 +21,46 @@ const ContactForm = () => {
     subject: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
   const contactData = data.Contact?.[0];
 
   const handleChange = (e) => {
+    console.log(e.target.name, e.target.value);
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+
+    // Here you would typically handle form submission, e.g., send data to a server
+    try{
+      // Here you would typically handle the form submission,
+       await fetch(
+        "https://script.google.com/macros/s/AKfycbzeWGEQ7kbweXj18tHRckBz-ikhuxS4SiuBbwdVpM1FZh09h-nHbe6PhR2cztn6h6Ou/exec",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+          }),
+        }
+      );
+
+      toast.success("Form submitted successfully!", { autoClose: 3000 });
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch(err){
+      console.error("Error sending message:", err);
+      toast.error("Sorry, there was an error sending your message. Please try again later.", { autoClose: 3000 });
+    } finally {
+      setLoading(false);
+    }
     console.log("Form submitted:", formData);
-    alert("Thank you! Your message has been sent.");
   };
 
   return (
@@ -72,7 +103,7 @@ const ContactForm = () => {
           />
         </div>
         <Listbox>
-          <div className="relative">
+          <div className="relative" >
             <ListboxButton className="w-full p-3 rounded-lg bg-slate-800 text-white text-left focus:outline-none focus:ring-2 focus:ring-orange-500">
               {({ value }) => value?.label ?? "Select..."}
             </ListboxButton>
@@ -83,6 +114,7 @@ const ContactForm = () => {
                   key={idx}
                   value={option}
                   className="cursor-pointer select-none p-2 text-white text-left hover:bg-slate-700"
+                  onClick={() => setFormData({ ...formData, subject: option.value })}
                 >
                   {option.label}
                 </ListboxOption>
@@ -102,8 +134,9 @@ const ContactForm = () => {
         <button
           type="submit"
           className="p-3 rounded-lg bg-orange-500 hover:bg-orange-600 font-semibold transition"
+          disabled={loading}
         >
-          Submit
+          {loading ? "Submitting..." : "Submit"}
         </button>
       </form>
       <p className="mt-6 text-xs sm:text-sm text-gray-400">
