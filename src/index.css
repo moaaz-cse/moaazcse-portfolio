@@ -1,27 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 @theme {
-  /* --color-primary-light: #6ee7b7;
-  --color-primary-dark: #047857;
-  --color-primary-DEFAULT: #10b981;
+  /* Custom Screens (v4 way) */
+  --breakpoint-xxs: 375px;
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 
-  --color-secondary-light: #a5b4fc;
-  --color-secondary-dark: #4f46e5;
-  --color-secondary-DEFAULT: #6366f1;
-
-  --color-accent-light: #fcd34d;
-  --color-accent-dark: #b45309;
-  --color-accent-DEFAULT: #f59e0b;
-
-  --color-neutral-light: #f3f4f6;
-  --color-neutral-dark: #9ca3af;
-  --color-neutral-DEFAULT: #374151;
-
-  --color-background: #111827;
-  --color-background-light: #1f2937; */
-
-  /*Here are the colors from figma, all figma color are prefixed with fgm-yourcolorname(like bg-fgm-black)*/
+  /* Figma colors */
   --color-fgm-black: #151312;
   --color-fgm-white: #ffffff;
   --color-fgm-gray: #998f8f;
@@ -33,20 +23,21 @@
   --color--fgm-url: #9769ff;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
+@layer base {
+  body {
+    font-family: "Poppins", sans-serif;
+  }
 }
 
 .testing {
-  /* height: 100%; */
-  overflow-y: hidden; /* prevent vertical body scrolling */
+  overflow-y: hidden;
 }
 
 .hide-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }

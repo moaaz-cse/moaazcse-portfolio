@@ -22,12 +22,12 @@ const Services = () => {
   return (
     <div className="">
       {/* Heading Section */}
-      <div className="bg-fgm-black px-6 text-start my-3">
+      <div className="bg-fgm-black px-6 md:text-start xxs:text-center md:my-3 xxs:my-6">
         <div className="flex flex-col justify-start">
-          <h1 className="text-[100px] font-bold text-white -mt-8 transform scale-x-96 origin-left uppercase">
+          <h1 className="md:text-[100px] xxs:text-[50px] font-bold text-white -mt-8 transform scale-x-96 origin-left uppercase">
             Software
           </h1>
-          <h1 className="text-[100px] font-bold text-[#B6B4BD] -mt-12 uppercase">
+          <h1 className="md:text-[100px] xxs:text-[50px] xxs:-mt-6 font-bold text-[#B6B4BD] md:-mt-12 uppercase">
             Engineer
           </h1>
         </div>
@@ -39,7 +39,7 @@ const Services = () => {
       </div>
 
       {/* Experience & Projects Section */}
-      <div className="lg:w-11/12 h-[155.5px] px-6">
+      <div className="md:w-11/12 h-[155.5px] px-6">
         <div className="flex w-full h-[155.5px] justify-start">
           {/* Years of Experience */}
           <div className="w-[200px] flex flex-col justify-between">
@@ -52,7 +52,7 @@ const Services = () => {
           </div>
 
           {/* Projects Completed */}
-          <div className="w-[250px] mx-10">
+          <div className="md:w-[250px] md:mx-10">
             <h1 className="text-[68px] font-bold text-fgm-white transform scale-x-190 origin-left tracking-[-3px]">
               +{projectNumber}
             </h1>

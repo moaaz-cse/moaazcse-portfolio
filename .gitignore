@@ -9,11 +9,10 @@ lerna-debug.log*
 
 node_modules
 dist
-data.json
 dist-ssr
 *.local
 
-data.json
+
 
 # Editor directories and files
 .vscode/*
@@ -25,3 +24,5 @@ data.json
 *.njsproj
 *.sln
 *.sw?
+
+data.json

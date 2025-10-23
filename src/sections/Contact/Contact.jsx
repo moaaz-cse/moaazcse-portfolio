@@ -22,6 +22,7 @@ const ContactForm = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const contactData = data.Contact?.[0];
 
   const handleChange = (e) => {
@@ -31,6 +32,10 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(!formData.name || !formData.email || !formData.message){
+      setError("Please fill in all fields.");
+      return;
+    }
     setLoading(true);
 
     // Here you would typically handle form submission, e.g., send data to a server
@@ -131,6 +136,11 @@ const ContactForm = () => {
           required
           className="p-3 rounded-lg bg-slate-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
         />
+
+        
+        {error && <p className="text-red-500 text-sm">{error}</p>}
+
+
         <button
           type="submit"
           className="p-3 rounded-lg bg-orange-500 hover:bg-orange-600 font-semibold transition"
