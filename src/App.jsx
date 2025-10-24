@@ -5,6 +5,7 @@ import Nav from "./sections/Nav/Nav";
 import Project from "./sections/Projects/Project";
 import Services from "./sections/ServiceSection/Services";
 import SkillsSection from "./sections/Skills/SkillsSection";
+import Team from "./sections/Team/Team";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
           <Experience />
           <Project />
           <SkillsSection />
+          <Team />
           <ContactForm />
         </div>
       </div>
