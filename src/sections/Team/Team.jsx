@@ -67,8 +67,11 @@ const Team = () => {
   return (
     <div className="bg-fgm-black text-white px-4 sm:px-6  py-12 sm:py-16">
       {/* Heading */}
-      <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold uppercase mb-4 sm:mb-6">
-        Our Team
+      <h1 className="text-[100px] font-bold text-white -mt-8 transform scale-x-95 origin-left uppercase">
+        Work
+      </h1>
+      <h1 className="text-[100px] font-bold text-[#B6B4BD] -mt-12 uppercase">
+        Expertise
       </h1>
       <p className="text-gray-300 mb-6 sm:mb-8 w-full sm:w-3/4 lg:w-3/4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
