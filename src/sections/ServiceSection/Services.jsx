@@ -16,8 +16,8 @@ const Services = () => {
   const { description, yearOfExperience, projectCompleted } = serviceData;
 
   // Extract numbers only (for display like +12 → +2)
-  const experienceNumber = yearOfExperience.replace(/\D/g, "");
-  const projectNumber = projectCompleted.replace(/\D/g, "");
+  const experienceNumber = yearOfExperience.replace(/[^\d.]/g, "");
+  const projectNumber = projectCompleted.replace(/[^\d.]/g, "");
 
   return (
     <div className="">
