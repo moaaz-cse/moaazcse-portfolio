@@ -1,27 +1,16 @@
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaAws, FaGitAlt } from "react-icons/fa";
-import {
-  SiMongodb,
-  SiExpress,
-  SiJavascript,
-  SiPython,
-  SiPostman,
-  SiMysql,
-} from "react-icons/si";
-import data from "../../../data.json"; // JSON file containing Skills array
 
-// Map icon names from JSON to actual React components
+// Import all icon packs you want to support
+import * as FaIcons from "react-icons/fa";
+import * as SiIcons from "react-icons/si";
+import * as TbIcons from "react-icons/tb"; // optional, if you plan to use Tabler icons later
+import data from "../../../data.json";
+
+// Combine all icons dynamically into one object
 const iconMap = {
-  SiJavascript: SiJavascript,
-  SiPython: SiPython,
-  FaReact: FaReact,
-  FaNodeJs: FaNodeJs,
-  SiExpress: SiExpress,
-  SiMongodb: SiMongodb,
-  SiMysql: SiMysql,
-  FaAws: FaAws,
-  FaGitAlt: FaGitAlt,
-  SiPostman: SiPostman,
+  ...FaIcons,
+  ...SiIcons,
+  ...TbIcons,
 };
 
 const SkillsSection = () => {
@@ -42,7 +31,7 @@ const SkillsSection = () => {
       {/* Skill Grid */}
       <div className="md:w-9/12 lg:w-11/12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
         {skills.map((skill, index) => {
-          const IconComponent = iconMap[skill.icon]; // get component dynamically
+          const IconComponent = iconMap[skill.icon]; // Automatically resolves
           return (
             <motion.div
               key={index}
@@ -53,8 +42,10 @@ const SkillsSection = () => {
               viewport={{ once: true }}
             >
               <div className="bg-[#1a1a1a] group-hover:bg-[#222] p-6 rounded-2xl transition-all duration-300 flex flex-col items-center justify-center shadow-md w-full">
-                {IconComponent && (
+                {IconComponent ? (
                   <IconComponent className={`text-5xl ${skill.color}`} />
+                ) : (
+                  <div className="text-gray-500 text-sm">Icon Not Found</div>
                 )}
                 <p className="mt-3 text-[#B6B4BD] font-medium text-sm uppercase tracking-wide">
                   {skill.name}
