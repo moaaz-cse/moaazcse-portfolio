@@ -68,10 +68,10 @@ const Team = () => {
     <div className="bg-fgm-black text-white px-4 sm:px-6  py-12 sm:py-16">
       {/* Heading */}
       <h1 className="text-[100px] font-bold text-white -mt-8 transform scale-x-95 origin-left uppercase">
-        Work
+        Our
       </h1>
       <h1 className="text-[100px] font-bold text-[#B6B4BD] -mt-12 uppercase">
-        Expertise
+        Team
       </h1>
       <p className="text-gray-300 mb-6 sm:mb-8 w-full sm:w-3/4 lg:w-3/4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
