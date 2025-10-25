@@ -8,37 +8,43 @@ import emailSvg from "../../assets/icons/email.svg";
 import downloadSvg from "../../assets/icons/download.png";
 import resumePDF from "../../assets/resume/mohd_niya_mul_haque.pdf";
 import { removeBackgroundAPI } from "../../api/removeBg";
+import copyEmailSvg from "../../assets/icons/copy.svg"; // 👈 your uploaded icon
 
 const Hero = () => {
-
   const [processedImage, setProcessedImage] = useState(null);
+  const [copied, setCopied] = useState(false); // ✅ state for copy status
 
-  // Access the first Hero object from JSON
   const heroData = data.Hero?.[0];
 
- useEffect(() => {
+  useEffect(() => {
     const processImage = async () => {
       try {
         const imageURL = await removeBackgroundAPI(
-          heroData.imageURL || 
-          "https://avatars.githubusercontent.com/u/43151778?s=400&u=58f4d236971551d8f9a9d137e5ba3b13c1c0200b&v=4"
+          heroData.imageURL ||
+            "https://avatars.githubusercontent.com/u/43151778?s=400&u=58f4d236971551d8f9a9d137e5ba3b13c1c0200b&v=4"
         );
         setProcessedImage(imageURL);
       } catch (error) {
         console.error("Error removing background:", error);
       }
     };
-
     processImage();
   }, []);
+
+  // ✅ Copy to clipboard function
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(heroData.email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <div
       id="hero"
-      className="bg-white xxs:h-[457px] xxs:mt-20 md:xxs:mt-6 md:w-[344px] md:h-[640px] rounded-2xl shadow-lg flex flex-col items-center justify-between p-6 borderxxs:mx-6"
+      className="bg-white xxs:h-[457px] xxs:mt-20 md:xxs:mt-6 md:w-[344px] md:h-[640px] rounded-2xl shadow-lg flex flex-col items-center justify-between p-6 border xxs:mx-6"
     >
       {/* Profile image box */}
-      <div className="bg-gradient-to-b from-[#9E2102] to-[#D24306] rounded-xl overflow-hidden mt-2  ">
+      <div className="bg-gradient-to-b from-[#9E2102] to-[#D24306] rounded-xl overflow-hidden mt-2">
         <img
           src={processedImage}
           alt={heroData.name}
@@ -47,14 +53,18 @@ const Hero = () => {
       </div>
 
       {/* Name */}
-      <h2 className="md:text-[36px] xxs:text-[36px] xxs:leading-[-0.04em] xxs:line-clamp-[110%] font-bold text-black mt-2">{heroData.name}</h2>
+      <h2 className="md:text-[36px] xxs:text-[36px] font-bold text-black mt-2">
+        {heroData.name}
+      </h2>
 
-      {/* Decoration (flame icon) */}
-      {/* <div className="flex flex-col items-center space-y-2">
-        <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center">
-          <span className="text-white text-xl">🔥</span>
-        </div>
-      </div> */}
+      {/* ✅ Copy Email Button */}
+      <button
+        onClick={handleCopyEmail}
+        className="flex items-center gap-2 mt-1 bg-gray-100 hover:bg-gray-200 text-sm px-3 py-1 rounded-full transition-all duration-200"
+      >
+        <img src={copyEmailSvg} alt="Copy email" className="w-4 h-4" />
+        {copied ? "Copied!" : "Copy Email"}
+      </button>
 
       {/* Description */}
       <p className="text-gray-600 text-center text-[14px] px-2 mt-2">
@@ -100,8 +110,7 @@ const Hero = () => {
           />
         </a>
 
-    {/* ✅ Download Resume Button */}
-     {/* Resume Icon */}
+        {/* ✅ Download Resume Button */}
         <a
           href={resumePDF}
           download="Mohd_Niyamul_Resume.pdf"
@@ -113,7 +122,6 @@ const Hero = () => {
             className="w-6 h-6 hover:opacity-80 transition-opacity duration-200"
           />
         </a>
-
       </div>
     </div>
   );

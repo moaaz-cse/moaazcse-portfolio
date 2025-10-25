@@ -32,16 +32,16 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(!formData.name || !formData.email || !formData.message){
+    if (!formData.name || !formData.email || !formData.message) {
       setError("Please fill in all fields.");
       return;
     }
     setLoading(true);
 
     // Here you would typically handle form submission, e.g., send data to a server
-    try{
+    try {
       // Here you would typically handle the form submission,
-       await fetch(
+      await fetch(
         "https://script.google.com/macros/s/AKfycbzeWGEQ7kbweXj18tHRckBz-ikhuxS4SiuBbwdVpM1FZh09h-nHbe6PhR2cztn6h6Ou/exec",
         {
           method: "POST",
@@ -59,9 +59,12 @@ const ContactForm = () => {
         email: "",
         message: "",
       });
-    } catch(err){
+    } catch (err) {
       console.error("Error sending message:", err);
-      toast.error("Sorry, there was an error sending your message. Please try again later.", { autoClose: 3000 });
+      toast.error(
+        "Sorry, there was an error sending your message. Please try again later.",
+        { autoClose: 3000 }
+      );
     } finally {
       setLoading(false);
     }
@@ -108,7 +111,7 @@ const ContactForm = () => {
           />
         </div>
         <Listbox>
-          <div className="relative" >
+          <div className="relative">
             <ListboxButton className="w-full p-3 rounded-lg bg-slate-800 text-white text-left focus:outline-none focus:ring-2 focus:ring-orange-500">
               {({ value }) => value?.label ?? "Select..."}
             </ListboxButton>
@@ -119,7 +122,9 @@ const ContactForm = () => {
                   key={idx}
                   value={option}
                   className="cursor-pointer select-none p-2 text-white text-left hover:bg-slate-700"
-                  onClick={() => setFormData({ ...formData, subject: option.value })}
+                  onClick={() =>
+                    setFormData({ ...formData, subject: option.value })
+                  }
                 >
                   {option.label}
                 </ListboxOption>
@@ -137,9 +142,7 @@ const ContactForm = () => {
           className="p-3 rounded-lg bg-slate-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500"
         />
 
-        
         {error && <p className="text-red-500 text-sm">{error}</p>}
-
 
         <button
           type="submit"
@@ -149,10 +152,17 @@ const ContactForm = () => {
           {loading ? "Submitting..." : "Submit"}
         </button>
       </form>
-      <p className="mt-6 text-xs sm:text-sm text-gray-400">
+      <p className="mt-6 text-xs sm:text-sm text-gray-400 text-center">
         Made by
         <a href="#" className="text-orange-500 hover:underline mx-1">
           {contactData.name}
+        </a>
+        |
+        <a
+          href={`mailto:${contactData.email}`}
+          className="text-orange-500 hover:underline mx-1"
+        >
+          {contactData.email}
         </a>
         | Powered by
         <a href="#" className="text-orange-500 hover:underline mx-1">
