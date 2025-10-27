@@ -1,5 +1,6 @@
 import ContactForm from "./sections/Contact/Contact";
 import Experience from "./sections/Experience/Experience";
+import GithubContributions from "./sections/GitHubGraph/GithubContributions";
 import Hero from "./sections/Hero/Hero";
 import Nav from "./sections/Nav/Nav";
 import Project from "./sections/Projects/Project";
@@ -24,6 +25,9 @@ export default function App() {
           <Services />
           <Experience />
           <Project />
+          {/* <div className="flex items-center justify-center bg-fgm-black text-white px-6 py-10"> */}
+          <GithubContributions />
+          {/* </div> */}
           <SkillsSection />
           <ContactForm />
         </div>
