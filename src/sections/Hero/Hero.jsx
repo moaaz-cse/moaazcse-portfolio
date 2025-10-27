@@ -62,7 +62,7 @@ const Hero = () => {
         onClick={handleCopyEmail}
         className="flex items-center gap-2 mt-1 bg-gray-100 hover:bg-gray-200 text-sm px-3 py-1 rounded-full transition-all duration-200"
       >
-        <img src={copyEmailSvg} alt="Copy email" className="w-4 h-4" />
+        {/* <img src={copyEmailSvg} alt="Copy email" className="w-4 h-4" /> */}
         {copied ? "Copied!" : "Copy Email"}
       </button>
 
@@ -97,7 +97,7 @@ const Hero = () => {
           />
         </a>
 
-        <a
+        {/* <a
           href={`mailto:${heroData.email}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -108,7 +108,7 @@ const Hero = () => {
             alt="Email"
             className="w-6 h-6 hover:opacity-80 transition-opacity duration-200"
           />
-        </a>
+        </a> */}
 
         {/* ✅ Download Resume Button */}
         <a
