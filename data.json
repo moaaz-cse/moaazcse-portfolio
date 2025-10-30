@@ -1,38 +1,4 @@
 {
-  "ServiceSection": [
-    {
-      "description": "Software Engineer with 2+ years of experience, currently training in AWS re/START with hands-on expertise in EC2, S3, IAM, networking, and Linux. Skilled in React.js, Node.js, RESTful APIs, and microservices with strong problem-solving skills. Seeking an entry-level role as a Cloud Support Associate/Cloud/Software Engineer.",
-      "yearOfExperience": "6+",
-      "projectCompleted": "6+"
-    }
-  ],
-  "Blog": [],
-  "Contact": [{ "name": "Moaaz Ahmed" }],
-  "Experience": [
-    {
-      "exp": "15 YEARS OF",
-      "items": [
-        {
-          "title": "Software Developer | Publicis Sapient",
-          "date": "Oct 2021 - Dec 2022",
-          "responsibilities": [
-            "Managed troubleshooting and resolving post-deployment issues and debugging (L3 support) across multiple markets, reducing bug turnaround time by 30%.",
-            "Developed and maintained full-stack features for Nestlé brand portals, handling frontend interfaces and backend integrations.",
-            "Designed and consumed RESTful APIs in collaboration with backend teams, handled JSON data mapping, error handling, and security (JWT).",
-            "Built responsive UI components using HTML, Twig, SCSS, JavaScript, and jQuery, ensuring cross-browser compatibility and WCAG AAA accessibility compliance."
-          ]
-        },
-        {
-          "title": "MERN | Embifi Pvt. Ltd.",
-          "date": "Feb 2021 - Sep 2021",
-          "responsibilities": [
-            "Developed and deployed company’s website using MERN stack, optimized for mobile, tablet, and desktop.",
-            "Worked with backend team to ensure API efficiency and integrated server side data into frontend views, improving user engagement."
-          ]
-        }
-      ]
-    }
-  ],
   "Hero": [
     {
       "imageURL": "img",
@@ -41,32 +7,86 @@
       "email": "moaaz.ds@gmail.com",
       "leetCode": "https://leetcode.com/u/moaaz-ahmed/",
       "gitHub": "https://github.com/moaaz-cse",
-      "linkedIn": "https://www.linkedin.com/in/moaaz-ahmed-70607621b/"
+      "linkedIn": "https://www.linkedin.com/in/moaaz-ahmed-70607621b/",
+      "portfolio": "https://moaazcse-portfolio.dev"
     }
   ],
-  "Home": [],
-  "Nav": [],
+  "ServiceSection": [
+    {
+      "description": "Software Engineer with 2+ years of experience in full-stack development (React.js, Node.js, RESTful APIs) and cloud computing (AWS EC2, S3, IAM, VPC, Linux). Skilled in troubleshooting, microservices, and problem-solving. Currently pursuing AWS re/START and seeking a Cloud Support or Software Engineer role.",
+      "yearOfExperience": "2+",
+      "projectCompleted": "10+"
+    }
+  ],
+  "Experience": [
+    {
+      "exp": "2+ YEARS OF",
+      "items": [
+        {
+          "title": "Software Developer | Publicis Sapient",
+          "date": "Oct 2021 - Dec 2022",
+          "responsibilities": [
+            "Managed troubleshooting and resolving post-deployment issues (L3 support) across multiple markets, reducing bug turnaround time by 30%.",
+            "Developed and maintained full-stack features for Nestlé brand portals, handling frontend interfaces and backend integrations.",
+            "Designed and consumed RESTful APIs, managed JSON data mapping, error handling, and JWT-based authentication.",
+            "Built responsive UI components using HTML, Twig, SCSS, JavaScript, and jQuery ensuring WCAG AAA accessibility compliance."
+          ]
+        },
+        {
+          "title": "Full Stack Developer (Intern) | Embifi Pvt. Ltd.",
+          "date": "Feb 2021 - Sep 2021",
+          "responsibilities": [
+            "Developed and deployed company website using MERN stack, optimized for mobile, tablet, and desktop.",
+            "Collaborated with backend team to enhance API performance and integrated server-side data into frontend views improving engagement."
+          ]
+        }
+      ]
+    }
+  ],
+  "Education": [
+    {
+      "degree": "Master of Technology in Mobile Communication and Network Technology (IT)",
+      "institution": "Netaji Subhas University of Technology (NSUT), Delhi, India",
+      "year": "2025",
+      "cgpa": "7.37/10"
+    },
+    {
+      "degree": "Bachelor of Technology in Computer Science and Engineering",
+      "institution": "Jamia Hamdard University, Delhi, India",
+      "year": "2021",
+      "cgpa": "7.87/10"
+    }
+  ],
+  "Certifications": [
+    "AWS Cloud Practitioner Essentials – Amazon Skill Builder",
+    "AWS Cloud Quest Practitioner – Amazon Skill Builder",
+    "AWS re/START Graduate – SMART Academy for Digital Technologies & Entrepreneurship"
+  ],
   "Projects": [
     {
-      "title": "DevTinder (Personal Project)",
-      "description": "Architected and implemented a React.js web application for developer matchmaking based on skills and interests. Designed a RESTful API with Node.js and Express.js, integrated MongoDB for storing user profiles. Implemented authentication and authorization using JWT, built a messaging feature for real-time user interaction.",
-      "image": "https://www.nestlegoodnes.com/fr/sites/default/files/styles/medium/public/logos/logo-garden-gourmet.png?itok=cOhd16Zb",
+      "title": "DevTinder",
+      "description": "Architected a matchmaking platform for developers based on skills/interests with secure JWT authentication. Built RESTful APIs with Node.js/Express.js and implemented real-time chat for user interaction.",
+      "tech": ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
+      "image": "https://cdn.iconscout.com/icon/premium/png-512-thumb/matchmaker-icon-svg-download-png-11509615.png?f=webp&w=256",
       "projectURL": "https://github.com/moaaz-cse/devTinder"
     },
     {
-      "title": "Nestle GardenGourmet-FRLaunch-2022:",
-      "description": "Independently implemented themes in the French market. Ensured responsive layout and optimized asset loading, achieving a 20% improvement in page load times. Using Twig, SCSS, JavaScript, and jQuery.",
+      "title": "Nestlé GardenGourmet FR Launch 2022",
+      "description": "Implemented localized themes for French market; improved asset load time by 20%.",
+      "tech": ["Twig", "SCSS", "JavaScript", "jQuery"],
       "image": "https://www.nestlegoodnes.com/fr/sites/default/files/styles/medium/public/logos/logo-garden-gourmet.png?itok=cOhd16Zb",
       "projectURL": "https://www.gardengourmet.fr/"
     },
     {
-      "title": "Maggi Arabia accessibility enhancement",
-      "description": "Enhanced website accessibility to meet AAA standards, including semantic markup, ARIA roles, and keyboard navigation. Coordinated with UX designers and QA engineers to validate improvements and document testing procedures.",
+      "title": "Maggi Arabia Accessibility Enhancement",
+      "description": "Enhanced accessibility to AAA standards using semantic HTML, ARIA roles, and keyboard navigation.",
+      "tech": ["WCAG", "HTML", "JavaScript"],
       "image": "https://www.maggiarabia.com/sites/default/files/maggi_logo1_0.png",
       "projectURL": "https://www.maggiarabia.com/en/"
     }
   ],
   "Skills": [
+    { "name": "C++", "icon": "SiCplusplus", "color": "text-blue-500" },
     {
       "name": "JavaScript",
       "icon": "SiJavascript",
@@ -78,12 +98,36 @@
     { "name": "Express.js", "icon": "SiExpress", "color": "text-gray-300" },
     { "name": "MongoDB", "icon": "SiMongodb", "color": "text-green-600" },
     { "name": "SQL", "icon": "SiMysql", "color": "text-blue-600" },
-    { "name": "AWS", "icon": "FaAws", "color": "text-orange-400" },
+    {
+      "name": "AWS (EC2, S3, IAM, VPC, CloudWatch)",
+      "icon": "FaAws",
+      "color": "text-orange-400"
+    },
     { "name": "Git", "icon": "FaGitAlt", "color": "text-red-500" },
-    { "name": "Postman", "icon": "SiPostman", "color": "text-orange-500" }
+    {
+      "name": "VSCode",
+      "icon": "SiVisualstudiocode",
+      "color": "text-blue-400"
+    },
+    { "name": "Postman", "icon": "SiPostman", "color": "text-orange-500" },
+    { "name": "JIRA", "icon": "SiJira", "color": "text-blue-500" },
+    {
+      "name": "Agile/Scrum",
+      "icon": "SiScrumalliance",
+      "color": "text-green-400"
+    }
   ],
-  "GitHub":[{
-    "userName":"moaaz-cse"
-  }],
+  "GitHub": [{ "userName": "moaaz-cse" }],
+  "Contact": [
+    {
+      "name": "Moaaz Ahmed",
+      "email": "moaaz.ds@gmail.com",
+      "phone": "+91-9354364735",
+      "location": "Delhi, India"
+    }
+  ],
+  "Blog": [],
+  "Home": [],
+  "Nav": [],
   "Tools": []
 }
