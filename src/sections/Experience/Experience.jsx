@@ -12,11 +12,11 @@ const Experience = () => {
       className="bg-fgm-black text-white px-6 py-10 mt-10"
     >
       {/* Header Section */}
-      <div className="text-start mb-8">
-        <h1 className="text-[100px] font-bold text-white -mt-8 transform scale-x-96 origin-left uppercase">
+      <div className="text-start mb-8 md:text-start xxs:text-center md:my-3 xxs:my-6">
+        <h1 className="md:text-[100px] xxs:text-[50px] font-bold text-white -mt-8 transform scale-x-96 origin-left uppercase">
           {experienceData.exp}
         </h1>
-        <h1 className="text-[100px] font-bold text-[#B6B4BD] -mt-12 uppercase">
+        <h1 className="md:text-[100px] xxs:text-[50px] xxs:-mt-6 font-bold text-[#B6B4BD] md:-mt-12 uppercase">
           EXPERIENCE
         </h1>
       </div>

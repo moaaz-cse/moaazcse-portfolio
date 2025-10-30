@@ -14,11 +14,11 @@ const Project = () => {
   return (
     <section id="projects" className="bg-fgm-black text-white px-6 py-16">
       {/* Heading */}
-      <div className="flex flex-col justify-start mb-10">
-        <h1 className="text-[100px] font-bold text-white -mt-8 transform scale-x-95 origin-left uppercase">
+      <div className="flex flex-col justify-start mb-10 md:text-start xxs:text-center md:my-3 xxs:my-6">
+        <h1 className="md:text-[100px] xxs:text-[50px] font-bold text-white -mt-8 transform scale-x-96 origin-left uppercase">
           Recent
         </h1>
-        <h1 className="text-[100px] font-bold text-[#B6B4BD] -mt-12 uppercase">
+        <h1 className="md:text-[100px] xxs:text-[50px] xxs:-mt-6 font-bold text-[#B6B4BD] md:-mt-12 uppercase">
           Projects
         </h1>
       </div>

@@ -39,24 +39,24 @@ const Services = () => {
       </div>
 
       {/* Experience & Projects Section */}
-      <div className="md:w-11/12 h-[155.5px] px-6">
-        <div className="flex w-full h-[155.5px] justify-start">
+      <div className="w-full md:w-11/12 px-4 md:px-6">
+        <div className="flex flex-col md:flex-row w-full items-center md:items-start justify-center md:justify-start gap-6 md:gap-10">
           {/* Years of Experience */}
-          <div className="w-[200px] flex flex-col justify-between">
-            <h1 className="text-[68px] font-bold text-fgm-white transform scale-x-190 origin-left tracking-[-3px]">
+          <div className="flex flex-col justify-between items-center md:items-start w-full md:w-[200px]">
+            <h1 className="text-[48px] sm:text-[56px] md:text-[68px] font-bold text-fgm-white md:transform md:scale-x-150 md:origin-left tracking-tight">
               +{experienceNumber}
             </h1>
-            <h2 className="text-[#998F8F]">
+            <h2 className="text-[#998F8F] text-center md:text-left text-sm sm:text-base">
               YEARS OF <br /> EXPERIENCE
             </h2>
           </div>
 
           {/* Projects Completed */}
-          <div className="md:w-[250px] md:mx-10">
-            <h1 className="text-[68px] font-bold text-fgm-white transform scale-x-190 origin-left tracking-[-3px]">
+          <div className="flex flex-col justify-between items-center md:items-start w-full md:w-[250px]">
+            <h1 className="text-[48px] sm:text-[56px] md:text-[68px] font-bold text-fgm-white md:transform md:scale-x-150 md:origin-left tracking-tight">
               +{projectNumber}
             </h1>
-            <h2 className="text-[#998F8F]">
+            <h2 className="text-[#998F8F] text-center md:text-left text-sm sm:text-base">
               PROJECTS <br /> COMPLETED
             </h2>
           </div>
