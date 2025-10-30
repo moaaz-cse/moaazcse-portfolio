@@ -82,5 +82,8 @@
     { "name": "Git", "icon": "FaGitAlt", "color": "text-red-500" },
     { "name": "Postman", "icon": "SiPostman", "color": "text-orange-500" }
   ],
+  "GitHub":[{
+    "userName":"moaaz-cse"
+  }},
   "Tools": []
 }
