@@ -67,66 +67,60 @@ const GithubContributions = () => {
   return (
     <section
       id="experience"
-      className="bg-fgm-black text-white px-4 sm:px-6 py-10 mt-10"
+      className="bg-fgm-black text-white px-6 py-10 mt-10 xxxs:-mt-8"
     >
-      {/* Heading */}
-      <div className="text-center md:text-start mb-8 md:w-11/12 mx-auto">
-        <h1 className="md:text-[100px] text-[48px] font-bold text-white uppercase leading-none">
+      <div className="text-center md:text-left  md:w-11/12 ">
+        <h1 className="text-[40px] sm:text-[45px] xs:text-left md:text-[90px] font-bold xxxs:text-center xxxs:text-[38px] text-white uppercase leading-tight">
           GitHub
         </h1>
-        <h1 className="md:text-[100px] text-[47px] font-bold text-[#B6B4BD] uppercase leading-none mt-2 md:-mt-6">
+        <h1 className="text-[40px] xs:text-left sm:text-[45px] md:text-[90px] xxxs:text-center xxxs:text-[38px] font-bold text-[#B6B4BD] uppercase -mt-2 md:-mt-6">
           Contribution
         </h1>
       </div>
 
-      {/* Container */}
-      <div className="min-h-[340px] sm:min-h-[350px] max-w-5xl md:w-11/12 mx-auto">
+      <div className="min-h-[340px]  sm:min-h-[350px] max-w-5xl md:w-11/12 ml-0">
+        {/* Graph and Year Buttons Container */}
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
-          {/* Graph */}
+          {/* Left: Graph */}
           <div className="flex-1 w-full overflow-x-auto pb-4 custom-scrollbar">
             {loading ? (
-              <p className="flex justify-center text-center text-[32px] sm:text-[48px] font-bold text-white uppercase my-12">
+              <p className="flex my-[95px] sm:my-[80px] justify-center text-center text-[48px] font-bold text-white transform scale-x-96 origin-left uppercase">
                 Loading...
               </p>
             ) : error ? (
               <p className="text-red-400 text-center">{error}</p>
             ) : weeks.length > 0 ? (
-              <div className="min-w-[100%] sm:min-w-[600px] px-2 sm:px-4">
-                {/* Month Labels */}
-                <div className="flex justify-evenly mb-2 text-[14px] sm:text-[20px] text-gray-400">
-                  {monthLabels.map((m, i) =>
-                    m.length > 0 ? (
-                      <div
-                        key={i}
-                        className="text-center min-w-[40px] sm:min-w-[60px]"
-                      >
-                        {m}
-                      </div>
-                    ) : null
-                  )}
+              <div className="min-w-[600px] ml-2 py-3 sm:min-w-0">
+                {/* Month labels */}
+                <div className="flex justify-evenly mb-2 text-[24px] text-gray-400">
+                  {monthLabels.map((m, i) => {
+                    if (m.length > 0) {
+                      return (
+                        <div key={i} className="w-9 text-center px-12">
+                          {m}
+                        </div>
+                      );
+                    }
+                  })}
                 </div>
-
-                {/* Weekday + Grid */}
+                {/* Weekday + grid */}
                 <div className="flex">
                   {/* Weekdays */}
-                  <div className="flex flex-col justify-between text-[12px] sm:text-[18px] text-gray-400 mr-2">
+                  <div className="flex flex-col justify-between text-[18px] text-gray-400 mr-2 h-[90px]">
                     <span>Mon</span>
                     <span>Wed</span>
                     <span>Fri</span>
                   </div>
 
                   {/* Grid */}
-                  <div className="flex gap-[4px] sm:gap-[6px]">
+                  <div className="flex gap-[6px]">
                     {weeks.map((week, i) => (
-                      <div
-                        key={i}
-                        className="flex flex-col gap-[2px] sm:gap-[3px]"
-                      >
+                      <div key={i} className="flex flex-col gap-[3px]">
                         {week.map((day, j) => (
                           <div
                             key={j}
                             title={`${day.date}: ${day.count} contributions`}
-                            className={`w-3 h-3 sm:w-4 sm:h-4 rounded-sm ${
+                            className={`w-4 h-4 rounded-sm ${
                               day.count === 0
                                 ? "bg-[#161b22]"
                                 : day.count < 2
@@ -143,11 +137,10 @@ const GithubContributions = () => {
                     ))}
                   </div>
                 </div>
-
-                {/* Summary & Legend */}
+                {/* Summary & legend */}
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center text-xs text-gray-400 mt-3 px-1 gap-2">
-                  <p className="text-sm sm:text-base text-center sm:text-left">
-                    <span className="text-green-400 font-semibold">
+                  <p className="text-lg text-left">
+                    <span className="text-green-400 font-semibold text-lg">
                       {totalContributions}
                     </span>{" "}
                     contributions in {year}
@@ -171,8 +164,7 @@ const GithubContributions = () => {
               </p>
             )}
           </div>
-
-          {/* Year Buttons */}
+          {/* Right: Year Buttons */}
           <div className="flex md:flex-col flex-row flex-wrap justify-center md:justify-start gap-2 pt-5">
             {yearButtons.map((y) => (
               <button

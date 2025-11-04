@@ -3,6 +3,7 @@
 
 @theme {
   /* Custom Screens (v4 way) */
+  --breakpoint-xxxs: 300px;
   --breakpoint-xxs: 375px;
   --breakpoint-xs: 480px;
   --breakpoint-sm: 640px;

@@ -74,14 +74,14 @@ const ContactForm = () => {
   return (
     <div
       id="contact"
-      className="bg-fgm-black text-white px-4 py-10 sm:px-6 lg:px-12 max-w-3xl  rounded-2xl shadow-lg "
+      className="bg-fgm-black text-white px-4 py-10 sm:px-6 max-w-3xl  rounded-2xl shadow-lg "
       // style={{ border: "2px solid red" }}
     >
-      <div className="flex flex-col items-center md:items-start text-center md:text-start mb-10 my-6">
-        <h1 className="md:text-[90px] text-[50px] font-extrabold text-white uppercase leading-none">
+      <div className="flex flex-col items-center xs:items-start sm:items-start text-center sm:text-left mb-10 my-6">
+        <h1 className="md:text-[90px] xxs:text-left text-[50px] xs:text-left font-bold sm:text-left  text-white uppercase leading-none">
           Let's Work
         </h1>
-        <h1 className="md:text-[90px] text-[50px] font-extrabold text-[#B6B4BD] uppercase mt-2 md:mt-0 leading-none">
+        <h1 className="md:text-[90px] xxs:text-left text-[50px] sm:text-left xs:text-left font-bold   text-[#B6B4BD] uppercase mt-2 md:mt-0 leading-none">
           Together
         </h1>
       </div>
