@@ -16,8 +16,8 @@ const Services = () => {
   const { description, yearOfExperience, projectCompleted } = serviceData;
 
   // Extract numbers only (for display like +12 → +2)
-  const experienceNumber = yearOfExperience.replace(/[^\d.]/g, "");
-  const projectNumber = projectCompleted.replace(/[^\d.]/g, "");
+  // const experienceNumber = yearOfExperience.replace(/[^\d.]/g, "");
+  // const projectNumber = projectCompleted.replace(/[^\d.]/g, "");
 
   return (
     <div className="">
@@ -44,7 +44,7 @@ const Services = () => {
           {/* Years of Experience */}
           <div className="flex flex-col justify-between items-center md:items-start w-full md:w-[200px]">
             <h1 className="text-[48px] sm:text-[56px] md:text-[68px] font-bold text-fgm-white md:transform md:scale-x-150 md:origin-left tracking-tight">
-              +{experienceNumber}
+              {yearOfExperience}
             </h1>
             <h2 className="text-[#998F8F] text-center md:text-left text-sm sm:text-base">
               YEARS OF <br /> EXPERIENCE
@@ -54,7 +54,7 @@ const Services = () => {
           {/* Projects Completed */}
           <div className="flex flex-col justify-between items-center md:items-start w-full md:w-[250px]">
             <h1 className="text-[48px] sm:text-[56px] md:text-[68px] font-bold text-fgm-white md:transform md:scale-x-150 md:origin-left tracking-tight">
-              +{projectNumber}
+              {projectCompleted}
             </h1>
             <h2 className="text-[#998F8F] text-center md:text-left text-sm sm:text-base">
               PROJECTS <br /> COMPLETED
