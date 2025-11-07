@@ -6,7 +6,7 @@ import leetCodeSvg from "../../assets/icons/leetCode.svg";
 import linkedInSvg from "../../assets/icons/linkedIn.svg";
 import emailSvg from "../../assets/icons/email.svg";
 import downloadSvg from "../../assets/icons/download.png";
-import resumePDF from "../../assets/resume/mohd_niya_mul_haque.pdf";
+import resumePDF from "../../assets/resume/moaaz_ahmed_resume.pdf";
 import { removeBackgroundAPI } from "../../api/removeBg";
 import copyEmailSvg from "../../assets/icons/copy.svg"; // 👈 your uploaded icon
 
@@ -31,6 +31,10 @@ const Hero = () => {
     processImage();
   }, []);
 
+  const defaultLinkedIn =
+    "https://www.linkedin.com/in/mohd-niya-mul-haque-cse/?trk=public_profile_browsemap";
+
+  const linkUrl = heroData?.linkedIn || defaultLinkedIn;
   // ✅ Copy to clipboard function
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(heroData.email);
@@ -46,9 +50,9 @@ const Hero = () => {
       {/* Profile image box */}
       <div className="bg-gradient-to-b from-[#9E2102] to-[#D24306] rounded-xl overflow-hidden mt-2">
         <img
-          src={processedImage}
+          src={processedImage || img}
           alt={heroData.name}
-          className="md:w-[240px] md:h-[280px] xxs:w-[260px] xxs:h-[210px] object-cover"
+          className="md:w-[240px] md:h-[280px] sm:w-[200px] sm:h-[200px]  xxxs:w-[200px] xxxs:h-[200px] xxs:w-[200px] xxs:h-[200px] xs:w-[200px] xs:h-[200px] "
         />
       </div>
 
@@ -85,7 +89,7 @@ const Hero = () => {
           <img src={gitHubSvg} alt="GitHub" className="w-6 h-6" />
         </a>
         <a
-          href="https://www.linkedin.com/in/mohd-niya-mul-haque-cse/?trk=public_profile_browsemap"
+          href={linkUrl}
           target="_blank"
           rel="noopener noreferrer"
           title="View my LinkedIn profile (login may be required)"
@@ -113,7 +117,7 @@ const Hero = () => {
         {/* ✅ Download Resume Button */}
         <a
           href={resumePDF}
-          download="Mohd_Niyamul_Resume.pdf"
+          download="Moaaz_Ahmed_Resume.pdf"
           title="Download Resume"
         >
           <img
