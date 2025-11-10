@@ -25,7 +25,7 @@ const Services = () => {
       <div className="bg-fgm-black px-6 md:text-start xxs:text-center md:my-3 xxs:my-6">
         <div className="flex flex-col justify-start">
           <h1 className="md:text-[100px] xs:text-left xxxs:mt-2.5 xxxs:text-center xxxs:text-[50px] xxs:text-[50px] font-bold text-white -mt-8 transform scale-x-96 origin-left uppercase">
-            Software
+            Cloud
           </h1>
           <h1 className="md:text-[100px] xs:text-left xxs:text-[50px] xxxs:text-[50px] xxxs:text-center xxs:-mt-6 font-bold text-[#B6B4BD] md:-mt-12 uppercase">
             Engineer

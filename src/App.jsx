@@ -27,10 +27,10 @@ export default function App() {
           <Experience />
           <Project />
           {/* <div className="flex items-center justify-center bg-fgm-black text-white px-6 py-10"> */}
-          <GithubContributions />
+          {/* <GithubContributions /> */}
           {/* </div> */}
           <SkillsSection />
-          <Team />
+          {/* <Team /> */}
           <ContactForm />
         </div>
       </div>

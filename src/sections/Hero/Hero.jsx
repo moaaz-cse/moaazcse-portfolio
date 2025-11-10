@@ -6,7 +6,7 @@ import leetCodeSvg from "../../assets/icons/leetCode.svg";
 import linkedInSvg from "../../assets/icons/linkedIn.svg";
 import emailSvg from "../../assets/icons/email.svg";
 import downloadSvg from "../../assets/icons/download.png";
-import resumePDF from "../../assets/resume/mohd_niya_mul_haque.pdf";
+import resumePDF from "../../assets/resume/aatif_alam_resume.pdf";
 import { removeBackgroundAPI } from "../../api/removeBg";
 import copyEmailSvg from "../../assets/icons/copy.svg"; // 👈 your uploaded icon
 
@@ -46,7 +46,10 @@ const Hero = () => {
       {/* Profile image box */}
       <div className="bg-gradient-to-b from-[#9E2102] to-[#D24306] rounded-xl overflow-hidden mt-2">
         <img
-          src={processedImage}
+          src={
+            processedImage ||
+            "https://avatars.githubusercontent.com/u/231174883?v=4"
+          }
           alt={heroData.name}
           className="md:w-[240px] md:h-[280px] xxs:w-[260px] xxs:h-[210px] object-cover"
         />
@@ -73,9 +76,9 @@ const Hero = () => {
 
       {/* Social Icons */}
       <div className="flex justify-center gap-6 mt-4">
-        <a href={heroData.leetCode} target="_blank" rel="noopener noreferrer">
+        {/* <a href={heroData.leetCode} target="_blank" rel="noopener noreferrer">
           <img src={leetCodeSvg} alt="LeetCode" className="w-6 h-6" />
-        </a>
+        </a> */}
         <a
           href={heroData.gitHub}
           target="_blank"
@@ -85,7 +88,7 @@ const Hero = () => {
           <img src={gitHubSvg} alt="GitHub" className="w-6 h-6" />
         </a>
         <a
-          href="https://www.linkedin.com/in/mohd-niya-mul-haque-cse/?trk=public_profile_browsemap"
+          href="https://www.linkedin.com/in/aatif-alam-903a04284/?trk=public_profile_browsemap"
           target="_blank"
           rel="noopener noreferrer"
           title="View my LinkedIn profile (login may be required)"
@@ -113,7 +116,7 @@ const Hero = () => {
         {/* ✅ Download Resume Button */}
         <a
           href={resumePDF}
-          download="Mohd_Niyamul_Resume.pdf"
+          download="Atif_Alam_Resume.pdf"
           title="Download Resume"
         >
           <img
