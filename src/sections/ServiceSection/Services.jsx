@@ -47,7 +47,7 @@ const Services = () => {
               {yearOfExperience}
             </h1>
             <h2 className="text-[#998F8F] text-center md:text-left text-sm sm:text-base">
-              YEARS OF <br /> EXPERIENCE
+              YEAR OF <br /> EXPERIENCE
             </h2>
           </div>
 

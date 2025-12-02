@@ -30,7 +30,7 @@ export default function App() {
           <GithubContributions />
           {/* </div> */}
           <SkillsSection />
-          <Team />
+          {/* <Team /> */}
           <ContactForm />
         </div>
       </div>
